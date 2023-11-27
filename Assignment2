@@ -22,7 +22,7 @@ EXPOSE 8080
 #start the command from .main
 CMD ["./main"]
 
-docker image build -t hemalathathatigutla/go-app:v2 .
+docker image build -t hemalathathatigutla/go-app:v1 .
 curl http://localhost:8080
 docker login 
-docker push hemalathathatigutla/go-app:v2
+docker push hemalathathatigutla/go-app:v1
