@@ -1,0 +1,3 @@
+Docker pull nginx 
+docker run -it -p 1234:80 nginx bash
+docker stop container_id
