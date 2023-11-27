@@ -9,3 +9,20 @@ Given that you have instructions to run the go-app ( in prerequisite )
 5.	Push the docker image to your docker hub. 
 
 Note: - use proper names for images, containers.
+Dockerfile :
+#latest image 
+FROM golang:latest
+# Working directory 
+WORKDIR /go-app
+COPY go.mod /go-app/
+RUN go mod download
+COPY . .
+RUN go build -o main
+EXPOSE 8080
+#start the command from .main
+CMD ["./main"]
+
+docker image build -t hemalathathatigutla/go-app:v2 .
+curl http://localhost:8080
+docker login 
+docker push hemalathathatigutla/go-app:v2
