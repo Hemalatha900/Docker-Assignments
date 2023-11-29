@@ -1,0 +1,22 @@
+version: "1"
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+  go-app:
+    build: .
+    depends_on:
+      - redis
+    environment:
+      REDIS_HOST: redis
+    ports:
+      - "8080:8080"
+networks:
+  my-network:
+
+Commands used :
+1.docker-compose build 
+2.docker-compose up -d
+3.curl http://localhost:8080/
+4.curl -X POST http://localhost:8080/vote  
