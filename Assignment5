@@ -1,0 +1,11 @@
+//git clone go-app and open application in intellij 
+//git pull
+//git branch -a to check all branches 
+//run latest redis image
+1.docker run -d --name redis  redis:latest
+//check ip address 
+2.docker inspect {redis-container-id}
+// "IPAddress": "10.4.0.73"
+3.git checkout redis
+4.docker build -t go-app-latest-image-redis:v1 .
+5.docker run -e REDIS_HOST=10.4.0.73 go-app-latest-image-redis:v1
