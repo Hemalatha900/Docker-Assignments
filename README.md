@@ -3,6 +3,8 @@ Assignment 1 : start nginx container , port forward to local ,check logs , go in
   2.docker run -it -p 1234:80 nginx bash # run nginx container interactive mode , open bash in container and port forward from 1234 to 80
   #enter control+D to come out from container 
   3.docker stop container_id #stop the container
+
+
 Assignment 2 : 
 	Given that you have instructions to run the go-app ( in prerequisite ) 
 	1.	Try to create a docker image out of it with the base image of `golang:latest`
@@ -33,10 +35,16 @@ Assignment 2 :
 		docker login 
 		docker push hemalathathatigutla/go-app:v1
 
+
+
+
  Assignment 3 : create multi stage build and run dockerfile for go application 
  			a.stage1:build
 		  b.stage2:Run 
 		Not completed
+
+
+  
 
  Assignment 4 :
  1.Create a volume, call it my_volume.
@@ -49,11 +57,17 @@ Assignment 2 :
  #attach contianer to above created volume 
  2.docker run -it --name container1 -v my_volume:/data ubuntu
   cd data
-echo "Test random text"> data/example.txt
-//Enter control+D to come out from container 
-docker run -it --name container2 -v my_volume:/data ubuntu
-cd data
-ls 
-cat example.txt 
+  echo "Test random text"> data/example.txt
+  //Enter control+D to come out from container 
+  docker run -it --name container2 -v my_volume:/data ubuntu
+  cd data
+  ls 
+  cat example.txt 
+
+
+
+
+
+
 		
  
