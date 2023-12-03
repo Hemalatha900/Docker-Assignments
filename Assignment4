@@ -1,9 +1,15 @@
+#create volume 
 docker volume create my_volume
+#attach volumne to unbuntu container and run container in interactive mode
 docker run -it --name container1 -v my_volume:/data ubuntu
+#go inside the volume folder
 cd data
+#create example.txt file and insert text
 echo "Test random text"> data/example.txt
-//Enter control+D to come out from container 
+# Enter control+D to come out from container
+# run second container and attach the same volume 
 docker run -it --name container2 -v my_volume:/data ubuntu
+#verify example.txt file present and persist the text .
 cd data
 ls 
 cat example.txt 
