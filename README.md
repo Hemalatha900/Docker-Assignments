@@ -12,10 +12,10 @@ Assignment 3 : create multi stage build and run dockerfile for go application
 a.stage1:build
 b.stage2:Run 
 Assignment 4 :
- 1.Create a volume, call it my_volume.
- 2.Create container and attach my_volume
- 3.change something in the volume folder, e.g: add a file with some content.
- 4.create a second container mounted with the same volume, Check if file exists?
+1.Create a volume, call it my_volume.
+2.Create container and attach my_volume
+3.change something in the volume folder, e.g: add a file with some content.
+4.create a second container mounted with the same volume, Check if file exists?
  
 Assignment 5 :
 Run redis container using official image
