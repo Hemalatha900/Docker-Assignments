@@ -1,3 +1,8 @@
- 1.docker network create my_network
- 2.docker run --name redis  --network my_network redis
- 3.docker run -e REDIS_HOST=redis go-app-latest-image-redis:v1
+// create network 
+1.docker network create my_network
+//Run redis container and connect to my_network
+2.docker run --name redis  --network my_network redis
+//Start go-app container with redis container name as
+REDIS_HOST env
+3.docker run -e REDIS_HOST=redis go-app-latest-image-redis:v1
+//access http://localhost:8080/vote link browser , you should able to access it .
