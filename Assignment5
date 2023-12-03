@@ -6,7 +6,9 @@
 //do docker ps and get the redis container id .
 //check ip address 
 2.docker inspect {redis-container-id}
-// "IPAddress": "10.4.0.73"
+// "IPAddress": "10.4.0.80"
 3.git checkout redis
-4.docker build -t go-app-latest-image-redis:v1 .
-5.docker run -e REDIS_HOST=10.4.0.73 go-app-latest-image-redis:v1
+4.docker build -t go-app-redis-image:v1 .
+#check the image - docker images 
+5.docker run -e REDIS_HOST=10.4.0.80 -p 8080:8080 go-app-redis-image:v1
+#open browser and access this link :http://localhost:8080/vote - you should able to see the total votes  1 
