@@ -1,4 +1,5 @@
 Assignment 1 : start nginx container , port forward to local ,check logs , go inside the container and stop the nginx container 
+
 Assignment 2 : 
 Given that you have instructions to run the go-app ( in prerequisite ) 
 1.Try to create a docker image out of it with the base image of `golang:latest`
