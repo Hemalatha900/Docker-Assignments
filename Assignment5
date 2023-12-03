@@ -1,5 +1,5 @@
-//git clone go-app and open application in intellij 
-//git pull
+//Git clone git clone https://github.com/docker-ninja/go-app.git
+// open above application in IDE
 //git branch -a to check all branches 
 //run latest redis image
 1.docker run -d --name redis  redis:latest
@@ -7,7 +7,9 @@
 //check ip address 
 2.docker inspect {redis-container-id}
 // "IPAddress": "10.4.0.80"
+//checkout to radis branch 
 3.git checkout redis
+// build the go-app image on redis branch
 4.docker build -t go-app-redis-image:v1 .
 //check the image - docker images 
 5.docker run -e REDIS_HOST=10.4.0.80 -p 8080:8080 go-app-redis-image:v1
