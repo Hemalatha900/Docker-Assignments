@@ -30,8 +30,20 @@ Eg: docker run -e REDIS_HOST-172.17.0.6 go-app-redis:v1
 5. Make sure app go app work by /vote endpoint
 
  
+Assignment 6 :
+1. Create network called my_network
+2. Run redis container and connect to my_network
+3. Start go-app container with redis container name as REDIS_HOST env
+Eg: docker run -e REDIS_HOST=<container-name> go-app-redis:v1
+4. Make sure app go app work by /vote endpoint
 
 
+Assignment 7 :
+1. Create docker-compose file for go application
+2. docker-compose up
+3. Use / endpoint to check the service running
+4. Use /vote endpoint to add vote
+5. docker-compose down
 
 
 		
