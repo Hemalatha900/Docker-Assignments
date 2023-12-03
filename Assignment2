@@ -9,6 +9,8 @@ Given that you have instructions to run the go-app ( in prerequisite )
 5.	Push the docker image to your docker hub. 
 
 Note: - use proper names for images, containers.
+1. Git clone git clone https://github.com/docker-ninja/go-app.git
+2.Create Dockerfile and insert below script.
 Dockerfile :
 #latest image 
 FROM golang:latest
@@ -22,7 +24,12 @@ EXPOSE 8080
 #start the command from .main
 CMD ["./main"]
 
+
+Commands :
+#Build and run docker image 
 docker image build -t hemalathathatigutla/go-app:v1 .
+#verify go-application is up
 curl http://localhost:8080
+#login to docker hub and push above image .
 docker login 
 docker push hemalathathatigutla/go-app:v1
