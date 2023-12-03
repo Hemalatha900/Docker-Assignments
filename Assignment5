@@ -3,6 +3,7 @@
 //git branch -a to check all branches 
 //run latest redis image
 1.docker run -d --name redis  redis:latest
+//do docker ps and get the redis container id .
 //check ip address 
 2.docker inspect {redis-container-id}
 // "IPAddress": "10.4.0.73"
