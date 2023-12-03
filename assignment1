@@ -1,3 +1,7 @@
+#pull nginx image
 Docker pull nginx 
+#run docker image in interactive mode
 docker run -it -p 1234:80 nginx bash
+#Enter control+D to come out from container 
+#stop container
 docker stop container_id
